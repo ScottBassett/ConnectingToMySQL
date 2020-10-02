@@ -3,3 +3,7 @@ C:\Training\ConnectingToMySQL\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.d
 C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csprojAssemblyReference.cache
 C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfoInputs.cache
 C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfo.cs
+C:\Training\ConnectingToMySQL\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.pdb
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.dll
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.pdb

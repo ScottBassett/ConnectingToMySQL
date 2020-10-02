@@ -1,0 +1,44 @@
+﻿@page "/books"
+
+@using DataLibrary
+@using BlazorServer.Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config;
+
+<h3>Books</h3>
+
+<button class="btn btn-primary" @onclick="AddBook">Add Book</button>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var book in books)
+    {
+        <p>
+            @book.Title by @book.Author
+        </p>
+    }
+}
+
+@code {
+
+    List<BookModel> books;
+
+    private async Task AddBook()
+    {
+        string sql = "INSERT INTO books (title,author,isbm,\"totalCopies\",\"availableCopies\") " +
+                     "VALUES(@Title,@Author,@Isbm,@TotalCopies,@AvailableCopies)";
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT * from books";
+
+        books = await _data.LoadData<BookModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+
+}
