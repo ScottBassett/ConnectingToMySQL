@@ -1,0 +1,5 @@
+C:\Training\ConnectingToMySQL\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.deps.json
+C:\Training\ConnectingToMySQL\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.dll
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csprojAssemblyReference.cache
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Training\ConnectingToMySQL\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfo.cs
