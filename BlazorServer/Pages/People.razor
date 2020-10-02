@@ -1,5 +1,18 @@
-﻿<h3>People</h3>
+﻿@page "/people"
+
+@using DataLibrary
+@using BlazorServer.Models
+@inject IDataAccess _data
+
+<h3>People</h3>
 
 @code {
+
+    List<BookModel> books;
+
+    protected override async Task OnInitializedAsync()
+    {
+       // await _data.LoadData<>()
+    }
 
 }
