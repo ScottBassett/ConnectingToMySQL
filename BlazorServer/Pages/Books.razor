@@ -9,6 +9,8 @@
 <h3>Books</h3>
 
 <button class="btn btn-primary" @onclick="AddBook">Add Book</button>
+<button class="btn btn-warning" @onclick="UpdateBook">Update Book</button>
+<button class="btn btn-danger" @onclick="DeleteBook">Delete Book</button>
 
 @if (books == null)
 {
@@ -30,9 +32,40 @@ else
 
     private async Task AddBook()
     {
-        string sql = "INSERT INTO books (title,author,isbm,\"totalCopies\",\"availableCopies\") " +
-                     "VALUES(@Title,@Author,@Isbm,@TotalCopies,@AvailableCopies)";
+        string sql = "INSERT INTO books (id,title,author,isbm,\"totalCopies\",\"availableCopies\") " +
+                     "VALUES(@Id,@Title,@Author,@Isbm,@TotalCopies,@AvailableCopies)";
+
+        await _data.SaveData(sql, new
+        {
+            Id = 8,
+            Title = "New Book",
+            Author = "New Author",
+            Isbm = 2235354,
+            TotalCopies = 5,
+            AvailableCopies = 5
+        }, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
     }
+
+    private async Task UpdateBook()
+    {
+        string sql = "UPDATE books SET title  = @Title WHERE id = @Id";
+
+        await _data.SaveData(sql, new{Id = 8, Title = "Newest Book"}, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
+    }
+
+    private async Task DeleteBook()
+    {
+        string sql = "DELETE FROM books WHERE id=@Id";
+
+        await _data.SaveData(sql, new {Id = 8}, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
+    }
+
 
     protected override async Task OnInitializedAsync()
     {
